@@ -11,7 +11,7 @@ void DesktopPublisher::onInit()
     ros::NodeHandle nh = getNodeHandle();
     _timer = nh.createTimer(ros::Duration(0.1), boost::bind(&DesktopPublisher::timerCb, this, _1));
     _it = new image_transport::ImageTransport(nh);
-    _image_pub = new image_transport::Publisher(_it->advertise("image", 10));
+    _image_pub = new image_transport::Publisher(_it->advertise("clip_image", 10));
     _cw = new CaptureWindow;
     _cw->show();
 }

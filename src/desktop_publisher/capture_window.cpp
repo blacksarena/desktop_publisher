@@ -4,6 +4,7 @@
 CaptureWindow::CaptureWindow(QWidget *parent)
 :QMainWindow(parent)
 {
+    this->setWindowTitle("CaptureWindow");
     label = new QLabel(this);
     label->move(0, 0);
     label->resize(this->width(), this->height());
@@ -20,7 +21,6 @@ cv::Mat CaptureWindow::getCaptureImage()
     int y = this->pos().y();
     int width  = this->size().width();
     int height = this->size().height();
-    printf("%d, %d, %d, %d\n", x, y, width, height);
     QPixmap pix = QGuiApplication::primaryScreen()->grabWindow(0, x, y, width, height);
     QImage clip_desktop = pix.toImage();
     label->setPixmap(pix);
