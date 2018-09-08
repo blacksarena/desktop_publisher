@@ -1,0 +1,7 @@
+<library path="lib/libDesktopPublisherLib">
+  <class name="desktop_publisher_node/DesktopPublisher" type="desktop_publisher_node::DesktopPublisher" base_class_type="nodelet::Nodelet">
+  <description>
+  This is my nodelet.
+  </description>
+  </class>
+</library>
